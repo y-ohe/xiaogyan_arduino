@@ -8,13 +8,13 @@
 
 #include <cstdint>
 
-#include "Gpio.hpp"
+#include "../include/Gpio.hpp"
 
-#include "TM1640.hpp"
-#include "LedMatrix.hpp"
-#include "LedMatrixAGFX.hpp"
-#include "Speaker.hpp"
-#include "Encoder.hpp"
+#include "../include/TM1640.hpp"
+#include "../include/LedMatrix.hpp"
+#include "../include/LedMatrixAGFX.hpp"
+#include "../include/Speaker.hpp"
+#include "../include/Encoder.hpp"
 
 class XiaogyanClass
 {
