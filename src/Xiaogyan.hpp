@@ -13,7 +13,11 @@
 #include "../include/TM1640.hpp"
 #include "../include/LedMatrix.hpp"
 #include "../include/LedMatrixAGFX.hpp"
+#if SPEAKER == 1
 #include "../include/Speaker.hpp"
+#elif SPEAKER == 2
+#include "../include/Speaker2.hpp"
+#endif
 #include "../include/Encoder.hpp"
 
 class XiaogyanClass
@@ -40,7 +44,11 @@ private:
 
 public:
     static LedMatrixAGFX ledMatrix;
+#if SPEAKER == 1
     static Speaker speaker;
+#elif SPEAKER == 2
+    static Speaker2 speaker;
+#endif
     static Encoder encoder;
     static GpioOutputPin<LED_PIN> led;
     static GpioInputPin<BUTTON_A_PIN> buttonA;
