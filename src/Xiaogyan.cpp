@@ -17,7 +17,7 @@ LedMatrix XiaogyanClass::ledMatrix_{ tm1640_ };
 
 LedMatrixAGFX XiaogyanClass::ledMatrix{ ledMatrix_ };
 
-#if SPEAKER == 1
+#if !defined(SPEAKER) || SPEAKER == 1
 Speaker XiaogyanClass::speaker{ SPEAKER_PIN, SPEAKER_ENABLE_PIN, SPEAKER_LEDC_CHANNEL };
 #elif SPEAKER == 2
 Speaker2 XiaogyanClass::speaker{ SPEAKER_PIN, SPEAKER_ENABLE_PIN, SPEAKER_LEDC_CHANNEL };

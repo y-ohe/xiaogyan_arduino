@@ -13,7 +13,7 @@
 #include "../include/TM1640.hpp"
 #include "../include/LedMatrix.hpp"
 #include "../include/LedMatrixAGFX.hpp"
-#if SPEAKER == 1
+#if !defined(SPEAKER) || SPEAKER == 1
 #include "../include/Speaker.hpp"
 #elif SPEAKER == 2
 #include "../include/Speaker2.hpp"
@@ -44,7 +44,7 @@ private:
 
 public:
     static LedMatrixAGFX ledMatrix;
-#if SPEAKER == 1
+#if !defined(SPEAKER) || SPEAKER == 1
     static Speaker speaker;
 #elif SPEAKER == 2
     static Speaker2 speaker;
