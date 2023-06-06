@@ -1,15 +1,15 @@
 /*
  * LedMatrixAGFX.cpp
- * Copyright (C) 2023 MATSUOKA Takashi
+ * Copyright (C) 2023 MATSUOKA Takashi <matsujirushi@live.jp>
  * MIT License
  */
 
 ////////////////////////////////////////////////////////////////////////////////
 // Includes
 
-#include "../include/LedMatrixAGFX.hpp"
-#include "../include/LedMatrix.hpp"
-#include "../include/TM1640.hpp"
+#include "LedMatrixAGFX.hpp"
+#include "LedMatrix.hpp"
+#include "TM1640.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
 // LedMatrixAGFX

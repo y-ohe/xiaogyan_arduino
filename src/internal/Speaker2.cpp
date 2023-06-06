@@ -1,13 +1,13 @@
 /*
  * Speaker2.cpp
- * Copyright (C) 2023 MATSUOKA Takashi
+ * Copyright (C) 2023 MATSUOKA Takashi <matsujirushi@live.jp>
  * MIT License
  */
 
 ////////////////////////////////////////////////////////////////////////////////
 // Includes
 
-#include "../include/Speaker2.hpp"
+#include "Speaker2.hpp"
 #include <Arduino.h>
 
 ////////////////////////////////////////////////////////////////////////////////

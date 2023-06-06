@@ -1,15 +1,15 @@
 /*
  * LedMatrix.cpp
- * Copyright (C) 2023 MATSUOKA Takashi
+ * Copyright (C) 2023 MATSUOKA Takashi <matsujirushi@live.jp>
  * MIT License
  */
 
 ////////////////////////////////////////////////////////////////////////////////
 // Includes
 
-#include "../include/LedMatrix.hpp"
+#include "LedMatrix.hpp"
 #include <cstring>
-#include "../include/TM1640.hpp"
+#include "TM1640.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
 // LedMatrix

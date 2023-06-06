@@ -1,6 +1,6 @@
 /*
  * Xiaogyan.hpp
- * Copyright (C) 2023 MATSUOKA Takashi
+ * Copyright (C) 2023 MATSUOKA Takashi <matsujirushi@live.jp>
  * MIT License
  */
 
@@ -8,17 +8,17 @@
 
 #include <cstdint>
 
-#include "../include/Gpio.hpp"
+#include "internal/Gpio.hpp"
 
-#include "../include/TM1640.hpp"
-#include "../include/LedMatrix.hpp"
-#include "../include/LedMatrixAGFX.hpp"
+#include "internal/TM1640.hpp"
+#include "internal/LedMatrix.hpp"
+#include "internal/LedMatrixAGFX.hpp"
 #if !defined(SPEAKER) || SPEAKER == 1
-#include "../include/Speaker.hpp"
+#include "internal/Speaker.hpp"
 #elif SPEAKER == 2
-#include "../include/Speaker2.hpp"
+#include "internal/Speaker2.hpp"
 #endif
-#include "../include/Encoder.hpp"
+#include "internal/Encoder.hpp"
 
 class XiaogyanClass
 {

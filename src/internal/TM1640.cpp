@@ -1,13 +1,13 @@
 /*
  * TM1640.cpp
- * Copyright (C) 2023 MATSUOKA Takashi
+ * Copyright (C) 2023 MATSUOKA Takashi <matsujirushi@live.jp>
  * MIT License
  */
 
 ////////////////////////////////////////////////////////////////////////////////
 // Includes
 
-#include "../include/TM1640.hpp"
+#include "TM1640.hpp"
 #include <Arduino.h>
 
 ////////////////////////////////////////////////////////////////////////////////
