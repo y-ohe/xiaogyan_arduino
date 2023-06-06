@@ -18,7 +18,6 @@ classDiagram
 
     XiaogyanClass --* LedMatrixAGFX
     XiaogyanClass --* Speaker
-    XiaogyanClass --* Speaker2
     XiaogyanClass --* Encoder
 
     class TM1640 {
@@ -56,12 +55,8 @@ classDiagram
         +begin()
         +setPowerSupply(on)
         +setTone(frequency)
-    }
-
-    class Speaker2 {
-        +Speaker2(speakerPin, speakerEnablePin, ledControlChannel)
-        +begin()
         +play(wave, length, frequency)
+        +stop()
     }
 
     class Encoder {
