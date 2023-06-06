@@ -17,11 +17,7 @@ LedMatrix XiaogyanClass::ledMatrix_{ tm1640_ };
 
 LedMatrixAGFX XiaogyanClass::ledMatrix{ ledMatrix_ };
 
-#if !defined(SPEAKER) || SPEAKER == 1
 Speaker XiaogyanClass::speaker{ SPEAKER_PIN, SPEAKER_ENABLE_PIN, SPEAKER_LEDC_CHANNEL };
-#elif SPEAKER == 2
-Speaker2 XiaogyanClass::speaker{ SPEAKER_PIN, SPEAKER_ENABLE_PIN, SPEAKER_LEDC_CHANNEL };
-#endif
 
 Encoder XiaogyanClass::encoder{ ENCODER_A_PIN, ENCODER_B_PIN };
 
@@ -34,12 +30,8 @@ void XiaogyanClass::begin()
     XiaogyanClass::ledMatrix_.begin(true, LedMatrix::ScreenRotation::Degree270);
 
     // Speaker
-#if SPEAKER == 1
     XiaogyanClass::speaker.begin();
     XiaogyanClass::speaker.setPowerSupply(true);
-#elif SPEAKER == 2
-    XiaogyanClass::speaker.begin();
-#endif
 
     // Encoder
     encoder.begin();
