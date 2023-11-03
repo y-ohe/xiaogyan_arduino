@@ -19,6 +19,8 @@ classDiagram
     XiaogyanClass --* LedMatrixAGFX
     XiaogyanClass --* Speaker
     XiaogyanClass --* Encoder
+    XiaogyanClass --* GpioOutputPin
+    XiaogyanClass --* GpioInputPin
 
     class TM1640 {
         +TM1640(dinPin, sclkPin)
