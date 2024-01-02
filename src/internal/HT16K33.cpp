@@ -21,7 +21,7 @@ void HT16K33::init()
 
     // Internal system clock settup
     Wire.beginTransmission(I2C_ADDRESS);
-    Wire.write(REG_POWER_CTL | OSC_ON);
+    Wire.write(REG_SYSTEM_SETUP | HT16K33_OSC_ON);
     if (Wire.endTransmission() != 0) abort();
 
     // ROW/INT output pin set
@@ -63,7 +63,6 @@ void HT16K33::begin()
     init();
 
     start();
-    write(0b01000000);  // Data command setting : Address auto + 1
     end();
 }
 
@@ -72,11 +71,11 @@ void HT16K33::setBrightness(int brightness)
     if (brightness < 0)  brightness = 0;
     if (brightness > 15) brightness = 15; // limit to max brightness
     Wire.beginTransmission(I2C_ADDRESS);
-    Wire.write(REG_DIMMING_SET | brightnes);
+    Wire.write(REG_DIMMING_SET | brightness);
     if (Wire.endTransmission() != 0) abort();
 }
 
-void HT16K33::setDisplayState(bool state)
+void HT16K33::setDisplayState(uint8_t state)
 {
     Wire.beginTransmission(I2C_ADDRESS);
     if(state) Wire.write(REG_DISPLAY_SETUP | HT16K33_DISP_ON);
