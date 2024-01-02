@@ -9,7 +9,7 @@
 
 #include "LedMatrixAGFX.hpp"
 #include "LedMatrix.hpp"
-#include "TM1640.hpp"
+#include "HT16K33.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
 // LedMatrixAGFX
