@@ -22,6 +22,7 @@ void HT16K33::init()
     // Internal system clock settup
     Wire.beginTransmission(I2C_ADDRESS);
     Wire.write(REG_SYSTEM_SETUP | HT16K33_OSC_ON);
+    delay(1);
     if (Wire.endTransmission() != 0) abort();
 
     // ROW/INT output pin set
@@ -72,6 +73,7 @@ void HT16K33::setBrightness(int brightness)
     if (brightness > 15) brightness = 15; // limit to max brightness
     Wire.beginTransmission(I2C_ADDRESS);
     Wire.write(REG_DIMMING_SET | brightness);
+    delay(1);
     if (Wire.endTransmission() != 0) abort();
 }
 
@@ -80,6 +82,7 @@ void HT16K33::setDisplayState(uint8_t state)
     Wire.beginTransmission(I2C_ADDRESS);
     if(state) Wire.write(REG_DISPLAY_SETUP | HT16K33_DISP_ON);
     else Wire.write(REG_DISPLAY_SETUP | HT16K33_DISP_OFF);
+    delay(1);
     if (Wire.endTransmission() != 0) abort();
 }
 
@@ -88,6 +91,7 @@ void HT16K33::blinkRate(uint8_t blink)
     if(blink / 2 > 3) blink = 0;
     Wire.beginTransmission(I2C_ADDRESS);
     Wire.write(REG_DISPLAY_SETUP | HT16K33_DISP_ON | blink);
+    delay(1);
     if (Wire.endTransmission() != 0) abort();
 }
 
@@ -112,6 +116,7 @@ void HT16K33::setGrid(uint8_t grid, uint8_t segs)
     Wire.beginTransmission(I2C_ADDRESS);
     Wire.write(REG_DISP_DATA_ADR_PT | grid);
     Wire.write(segs);
+    delay(1);
     if (Wire.endTransmission() != 0) abort();
     end();
 }
