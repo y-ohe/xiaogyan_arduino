@@ -9,12 +9,12 @@
 
 #include "LedMatrix.hpp"
 #include <cstring>
-#include "TM1640.hpp"
+#include "HT16K33.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
 // LedMatrix
 
-LedMatrix::LedMatrix(TM1640& ledDriver) :
+LedMatrix::LedMatrix(HT16K33& ledDriver) :
     ledDriver_{ ledDriver }
 {
 }
