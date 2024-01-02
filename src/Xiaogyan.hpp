@@ -11,6 +11,7 @@
 #include "internal/Gpio.hpp"
 
 #include "internal/TM1640.hpp"
+#include "internal/HT16K33.hpp"
 #include "internal/LedMatrix.hpp"
 #include "internal/LedMatrixAGFX.hpp"
 #include "internal/Speaker.hpp"
@@ -21,6 +22,8 @@ class XiaogyanClass
 private:
     static constexpr uint8_t TM1640_DIN_PIN     = D10;
     static constexpr uint8_t TM1640_SCLK_PIN    = D8;
+    static constexpr uint8_t HT16K33_SDA_PIN    = D4;
+    static constexpr uint8_t HT16K33_SCL_PIN    = D5;
     static constexpr uint8_t SPEAKER_PIN        = D0;
     static constexpr uint8_t SPEAKER_ENABLE_PIN = -1;   // D3
     static constexpr uint8_t ENCODER_A_PIN      = D1;
@@ -33,9 +36,12 @@ private:
 
     static const uint8_t TM1640_GRID_MAP[];
     static const uint8_t TM1640_ROW_MAP[];
+    static const uint8_t HT16K33_GRID_MAP[];
+    static const uint8_t HT16K33_ROW_MAP[];
 
 private:
     static TM1640 tm1640_;
+    static HT16K33 ht16k33_;
     static LedMatrix ledMatrix_;
 
 public:
