@@ -10,7 +10,7 @@
 #include <cstdint>
 #include <ArduinoEigen.h>
 
-class TM1640;
+class HT16K33;
 
 class LedMatrix
 {
@@ -29,7 +29,7 @@ private:
     static constexpr int COLOR_BITS = 2;
 
 private:
-    TM1640& ledDriver_;
+    HT16K33& ledDriver_;
     Eigen::Matrix<int, 3, 3> screenAffineTransformation_;
     uint8_t buffer_[COLOR_BITS][HEIGHT];
 
@@ -44,13 +44,13 @@ public:
         return HEIGHT;
     }
 
-    TM1640& getLedDriver() const
+    HT16K33& getLedDriver() const
     {
         return ledDriver_;
     }
 
 public:
-    explicit LedMatrix(TM1640& ledDriver);
+    explicit LedMatrix(HT16K33& ledDriver);
     void begin();
     void begin(bool flip, ScreenRotation screenRotation);
     int getPixel(int x, int y) const;
